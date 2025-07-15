@@ -1,0 +1,20 @@
+- route:
+    id: route-3f98
+    nodePrefixId: route-e3b
+    from:
+      id: from-8702
+      uri: direct
+      parameters:
+        name: internal-route
+      steps:
+        - log:
+            id: log-0a06
+            message: ${body}
+- rest:
+    id: rest-d1ab
+    post:
+      - id: post-532d
+        path: /
+        to: direct:internal-route
+        consumes: application/json
+        produces: application/json
