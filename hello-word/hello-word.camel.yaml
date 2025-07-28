@@ -10,11 +10,3 @@
         - log:
             id: log-0a06
             message: ${body}
-- rest:
-    id: rest-d1ab
-    post:
-      - id: post-532d
-        path: /
-        to: direct:internal-route
-        consumes: application/json
-        produces: application/json
